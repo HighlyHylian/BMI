@@ -36,7 +36,18 @@ class TestBMICalculator(unittest.TestCase):
         self.assertEqual(split_height_string("411"), (None))
 
     def test_return_bmi_category(self):
-        pass
+        # Near upper bound underweight
+        self.assertEqual(return_bmi_category(18.4), "Underweight")
+        # Lower bound normal weight
+        self.assertEqual(return_bmi_category(18.5), "Normal weight")
+        # Near upper bound normal weight
+        self.assertEqual(return_bmi_category(24.9), "Normal weight")
+        # Lower bound overweight
+        self.assertEqual(return_bmi_category(25), "Overweight")
+        # Near upper bound overweight
+        self.assertEqual(return_bmi_category(29.9), "Overweight")
+        # Lower bound obese
+        self.assertEqual(return_bmi_category(30), "Obese")
 
 if __name__ == "__main__":
     unittest.main()
