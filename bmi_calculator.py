@@ -1,5 +1,5 @@
 def calculate_bmi(heightMeters, weightKg):
-    pass
+    return weightKg / (heightMeters ** 2)
 
 def get_kg_from_pounds(pounds):
     pass
