@@ -48,6 +48,7 @@ class TestBMICalculator(unittest.TestCase):
         self.assertEqual(return_bmi_category(29.9), "Overweight")
         # Lower bound obese
         self.assertEqual(return_bmi_category(30), "Obese")
+        
 
 if __name__ == "__main__":
     unittest.main()
